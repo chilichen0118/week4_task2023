@@ -1,0 +1,23 @@
+.link-hover {
+    position: relative;
+    display: block;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: -5px;
+        height: 1px;
+        background: $white;
+        transition: all .3s ease-in;
+    }
+
+    &:hover::after {
+        width: 100%;
+
+        @include Mobile {
+            width: 0;
+        }
+    }
+}

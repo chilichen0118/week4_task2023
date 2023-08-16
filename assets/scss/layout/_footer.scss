@@ -1,4 +1,127 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+// footer
+
+.footer {
+    background: $primary;
+    color: $white;
+
+    & > .container:first-child {
+        @include Mobile {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .footer-top {
+        @include Mobile {
+            margin-bottom: 0;
+        }
+    }
+
+    &-menu {
+        gap: 48px;
+
+        @include Mobile {
+            display: none;
+        }
+    }
+
+    &-social-media {
+        gap: 32px;
+
+        @include Pad {
+            gap: 16px;
+        }
+
+        @include Mobile {
+            gap: 8px;
+        }
+
+        li {
+            flex-basis: 48px;
+
+            &:not(:first-child) {
+                @include Pad {
+                    margin-left: 16px;
+                }
+
+                @include Pad {
+                    margin-left: 8px;
+                }
+            }
+            
+
+            &:hover img {
+                transform: translateY(-5px);
+            }
+
+            img {
+                transition: transform .3s ease-in-out;
+
+                @include Pad {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @include Mobile {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &-contact {
+        gap: 8px;
+
+        @include Mobile {
+            order: -1;
+
+            a {
+                font-size: 1rem;
+            }
+
+            .material-icons-outlined {
+                font-size: 1.5rem;
+                margin-right: 8px;
+            }
+        }
+
+        
+    }
+
+    .line {
+        display: block;
+        height: 1px;
+        background: $white;
+    }
+
+    & > .container:last-child {
+        @include Mobile {
+            padding-top: 16px;
+            padding-bottom: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                margin-bottom: 8px;
+            }
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    margin: 0;
+                    font-size: 1rem;
+
+                    &:first-child {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+        
+    }
 }

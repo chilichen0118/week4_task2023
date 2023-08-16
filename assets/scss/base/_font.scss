@@ -1,0 +1,40 @@
+// 14 16 18 20 24 32 36 42 48 64
+$font-size: (
+    0: $font-size-base *.875, //14
+    1: $font-size-base,
+    2: $font-size-base * 1.125, //18
+    3: $font-size-base * 1.25, //20
+    4: $font-size-base * 1.5, //24
+    5: $font-size-base * 2, //32
+    6: $font-size-base * 2.25, //36
+    7: $font-size-base * 2.625, //42
+    8: $font-size-base * 3, //48
+    9: $font-size-base * 4, //64
+);
+
+@each $key, $value in $font-size {
+    .fz-#{$key} {
+        font-size: $value;
+    }
+}
+
+$font-weight: (
+    1: $font-weight-base,
+    2: $font-weight-base + 100, //500 medium
+    3: $font-weight-base + 300, //700 bold
+    4: $font-weight-base + 500, //900 black
+);
+
+@each $key, $value in $font-weight {
+    .fw-#{$key} {
+        font-weight: $value;
+    }
+}
+
+.fs-italic {
+    font-style: italic;
+}
+
+.text-align-center {
+    text-align: center;
+}

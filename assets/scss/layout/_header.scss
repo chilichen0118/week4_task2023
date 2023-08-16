@@ -1,4 +1,52 @@
-.header{
-  background: #9d69f0;
-  font-size: 150px;
+// nav
+
+nav {
+    background-color: $primary;
+    color: $white;
+
+    .container {
+
+        @include Mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    h1 {
+        @include Mobile {
+            margin-left: 12px;
+        }
+        a {
+            background: url(../images/logo-white.png) no-repeat center / contain;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 80px;
+            height: 72px;
+            display: block;
+        }
+    }
+
+    .menu {
+        @include Mobile {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        li {
+            @include Mobile {
+                width: 50%;
+                margin: 0;
+                text-align: center;
+                outline: 1px solid $white;
+
+                a {
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
 }

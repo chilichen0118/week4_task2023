@@ -1,0 +1,144 @@
+.submenu {
+    background: $secondary;
+    nav {
+        background: transparent;
+    }
+
+    li {
+        a {
+            display: block;
+            padding: 14px 0;
+        }
+    }
+
+    .search-btn {
+        display: block;
+    }
+
+    .material-icons-outlined {
+        font-size: 40px;
+        vertical-align: middle;
+    }
+
+    @include Mobile {
+        display: none;
+    }
+}
+
+.page-title {
+    border-left: 8px solid #9f1213;
+
+    @include Pad {
+        margin-top: 80px;
+    }
+
+    @include Mobile {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 1.5rem;
+    }
+}
+
+.blog {
+    gap: 60px;
+    @include Pad {
+        gap: 24px;
+    }
+
+    @include Mobile {
+        padding-bottom: 64px;
+    }
+
+    .blog-item {
+        gap: 24px;
+
+        @include Mobile {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .blog-img {
+            flex-basis: 636px;
+            flex-shrink: 0;
+
+            @include Pad {
+                flex-basis: calc((100% - 24px) / 2);
+            }
+
+            img {
+                @include Pad {
+                    width: 100%;
+                    height: 208px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &-content {
+        @include Pad {
+            flex-basis: calc((100% - 24px) / 2);
+        }
+        &-text {
+            h3 {
+                color: $secondary;
+                @include Pad {
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                color: #555;
+                font-size: 1.25rem;
+                position: relative;
+
+                @include Pad {
+                    font-size: 1rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 6;
+                    -webkit-box-orient: vertical;
+                }
+                @include Mobile {
+                    display: none;
+                }
+                
+                span {
+                    @media (min-width: 992px)  {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: 16px;
+            @include Pad {
+                margin-bottom: 4px;
+            }
+
+            h4 {
+                font-weight: 500;
+                @include Pad {
+                    font-size: 1rem;
+                }
+            }
+            time {
+                color: rgba(0,0,0,.7);
+            }
+        }
+    }
+
+    &-more {
+        color: $primary;
+        font-size: 2.25rem;
+        text-align: right;
+        font-weight: 900;
+
+        @include Pad {
+            display: none;
+        }
+    }
+
+    
+}

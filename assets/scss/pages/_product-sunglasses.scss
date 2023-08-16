@@ -1,0 +1,43 @@
+.product-sunglasses {
+    .product-list-sunglasses {
+        gap: 80px 24px;
+
+        @include Pad {
+            gap: 40px 24px;
+        }
+
+        @include Mobile {
+            gap: 24px;
+            justify-content: center;
+        }
+
+    li {
+        max-width: calc((100% - 48px) / 3);
+
+        &:nth-child(1n + 7) {
+            @include Pad {
+                display: none;
+            }
+        }
+
+        &:nth-child(1n + 6) {
+            @include Mobile {
+                display: none;
+            }
+        }
+
+        @include Pad {
+            max-width: calc((100% - 24px) / 2);
+        }
+        @include Mobile {
+            max-width: 348px;
+        }
+    }
+
+    img {
+        height: 224px;
+        object-fit: cover;
+    }
+}
+}
+

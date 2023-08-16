@@ -1,0 +1,85 @@
+.page-title {
+    border-left: 8px solid #9f1213;
+
+    @include Pad {
+        margin-top: 80px;
+    }
+
+    @include Mobile {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 1.5rem;
+    }
+}
+
+.area-dropdown {
+    @include Mobile {
+        margin-bottom: 24px;
+    }
+
+    label {
+        @include Mobile {
+            font-size: 1rem;
+        }
+    }
+
+    select {
+        appearance: none;
+        line-height: 1.5;
+        color: rgb(29,31,34,.75);
+        padding: 6px 12px;
+        border: 1px solid #CED4DA;
+        width: 304px;
+        background: url('../img/arrow_drop_down_black_24dp.svg') no-repeat right center;
+        background-position-x: calc(100% - 6px);
+
+        @include Mobile {
+            max-width: 276px;
+        }
+    }
+}
+
+.shop {
+    gap: 24px;
+    @include Mobile {
+        padding-bottom: 64px;
+    }
+
+    li {
+        max-width: calc((100% - 48px) / 3);
+        @include Pad {
+            max-width: calc((100% - 24px) / 2);
+        }
+        @include Mobile {
+            max-width: 100%;
+        }
+
+        h3 {
+            color: #212529;
+            outline: 1px solid rgba(0,0,0,.2);
+        }
+
+        .material-icons-outlined {
+            margin-right: 8px;
+        }
+
+        .shop-info {
+            padding: 16px 24px;
+            outline: 1px solid rgba(0,0,0,.2);
+
+            a {
+                font-size: 1.25rem;
+            }
+
+            & > *:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        .shop-more {
+            display: block;
+            color: $white;
+            background: $black;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+.blog-info-submenu {
+
+    @include Mobile {
+        display: block;
+        font-size: 1rem;
+    }
+
+    ul {
+        @include Mobile {
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 24px;
+        }
+    }
+
+    li {
+
+        @include Mobile {
+            margin: 0;
+        }
+        a {
+
+            @include Mobile {
+                font-size: 1rem;
+            }
+            
+        }
+    }
+
+    .material-icons-outlined {
+        @include Mobile {
+            display: none;
+        }
+    }
+}
+
+.breadcrumb {
+    background: transparent;
+
+    @include Pad {
+        margin-top: 8px;
+    }
+
+    @include Mobile {
+        margin-top: 16px;
+    }
+
+    &-item {
+        color: $black;
+    }
+
+    &-item:not(:last-child)::after {
+        content: '/';
+        margin: 0 2px;
+    }
+
+    &-page {
+        color: $primary;
+    }
+}
+
+.hashtag {
+    display: block;
+    font-size: 1.5rem;
+    color: $primary;
+    font-weight: 700;
+}
+
+.blog-info {
+    gap: 24px;
+
+    &-area {
+        max-width: 856px;
+        @include Pad {
+            max-width: 516px;
+        }
+
+        @include Mobile {
+            padding-bottom: 48px;
+        }
+
+        &-content {
+            margin-bottom: 40px;
+
+            @include Pad {
+                margin-bottom: 24px;
+            }
+
+            @include Mobile {
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-top: 8px;
+                color: #555;
+
+                @include Pad {
+                    margin-top: 16px;
+                }
+
+                @include Mobile {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        &-bottom-share {
+            gap: 16px;
+            @include Pad {
+                padding-top: 16px;
+            }
+
+            @include Mobile {
+                display: none;
+            }
+        }
+
+        h2 {
+            @include Mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        h3 {
+            @include Pad {
+                margin-bottom: 24px;
+            }
+
+            @include Mobile {
+                margin-bottom: 16px;
+            }
+        }
+
+        .seperation-line {
+            display: block;
+            background: #707070;
+            height: 1px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+
+            @include Mobile {
+                display: none;
+            }
+        }
+
+        &-bottom-switch {
+
+            @include Mobile {
+                display: none;
+            }
+        }
+    }
+
+    &-tags {
+        color: $primary;
+        flex-grow: 1;
+
+        @include Mobile {
+            display: none;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+
+            @include Pad {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+        }
+
+        .material-icons-outlined {
+            margin-right: 8px;
+            font-size: 3rem;
+
+            @include Pad {
+                font-size: 1.5rem;
+                margin-right: 0;
+            }
+        }
+
+        &-hashtag {
+            max-width: 256px;
+            gap: 4px 24px;
+
+            @include Pad {
+                gap: 0 16px;
+            }
+
+            .hashtag {
+                @include Pad {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

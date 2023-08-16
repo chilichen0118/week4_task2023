@@ -1,0 +1,11 @@
+@mixin Pad {
+    @media (max-width: $pad) {
+        @content
+    }
+};
+
+@mixin Mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+};

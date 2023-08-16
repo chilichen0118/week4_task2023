@@ -1,0 +1,28 @@
+.page-title {
+    border-left: 8px solid #9f1213;
+
+    @include Pad {
+        margin-top: 80px;
+    }
+
+    @include Mobile {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 1.5rem;
+    }
+}
+
+.faq {
+    @include Mobile {
+        padding-bottom: 64px;
+    }
+
+    &-list {
+        li:not(:last-child) {
+            @include Mobile {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
